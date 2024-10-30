@@ -1,9 +1,7 @@
 name: Ansible Hello World
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   hello-world:
@@ -26,4 +24,3 @@ jobs:
     - name: Run Ansible Playbook to print Hello World
       run: |
         ansible-playbook -i ansible/inventory.ini ansible/hello-world.yml
-        
